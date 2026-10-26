@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>熊本・鹿兒島 6 日小旅行</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Huninn&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#3E3A39;--paper:#FFFCF6;--coral:#F2A497;--yellow:#F6D27A;--blue:#A8D3E6;--green:#B9DAA5;--r:24px;box-sizing:border-box;padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px));color-scheme:light}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Huninn","Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;line-height:1.6;font-size:16px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--yellow);z-index:30}
+nav{position:fixed;top:0;left:0;right:0;z-index:20;padding:calc(8px + env(safe-area-inset-top,0px)) 10px 8px;background:var(--yellow);border-bottom:3px solid var(--ink);display:flex;gap:6px;overflow-x:auto;justify-content:center}
+nav a{flex:none;color:var(--ink);text-decoration:none;font-size:14px;padding:4px 12px;border:3px solid var(--ink);border-radius:999px;background:var(--paper)}
+nav a:active{background:var(--coral)}
+main{max-width:640px;margin:0 auto;padding:calc(64px + env(safe-area-inset-top,0px)) 16px 40px}
+section{margin-top:30px}
+h2{font-size:22px;margin:0 0 12px;display:inline-block;background:var(--green);border:3px solid var(--ink);border-radius:999px;padding:2px 16px}
+.card{background:#fff;border:3px solid var(--ink);border-radius:var(--r);padding:16px;box-shadow:0 5px 0 var(--ink)}
+.hero{background:var(--blue);padding:0;overflow:hidden;text-align:center}
+.hero svg{display:block;width:100%;height:auto;border-bottom:3px solid var(--ink)}
+.hero .tx{padding:14px 16px 18px;background:var(--paper)}
+.hero h1{margin:0;font-size:26px;line-height:1.3}
+.hero p{margin:4px 0 12px}
+.count{display:inline-flex;align-items:baseline;gap:6px;background:var(--coral);border:3px solid var(--ink);border-radius:var(--r);padding:6px 18px}
+.count b{font-size:38px;line-height:1.1}
+/* flight */
+.fl{display:grid;gap:12px}
+.leg{border:3px solid var(--ink);border-radius:20px;padding:12px;background:var(--paper)}
+.leg h3{margin:0 0 6px;font-size:16px;display:flex;justify-content:space-between;align-items:center}
+.route{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:20px}
+.route small{display:block;font-size:12px;opacity:.75}
+.route svg{flex:1;height:26px;min-width:40px}
+.leg input{width:100%;margin-top:8px;font:inherit;font-size:14px;color:var(--ink);background:#fff;border:3px solid var(--ink);border-radius:14px;padding:6px 10px}
+.leg input::placeholder{color:#8a8482}
+.pill{font-size:12px;border:3px solid var(--ink);border-radius:999px;padding:0 10px;background:var(--yellow)}
+/* tabs */
+.tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:4px 2px 12px}
+.tabs button{flex:none;font:inherit;font-size:14px;color:var(--ink);background:#fff;border:3px solid var(--ink);border-radius:18px;padding:4px 12px;line-height:1.3;cursor:pointer;text-align:center}
+.tabs button small{display:block;font-size:11px}
+.tabs button[aria-selected=true]{background:var(--coral);box-shadow:0 4px 0 var(--ink)}
+.dayhead{margin:4px 0 14px}
+.dayhead h3{margin:0;font-size:19px}
+.dayhead p{margin:0;font-size:14px;opacity:.8}
+.tl{list-style:none;margin:0;padding:0 0 0 22px;border-left:4px dashed var(--ink);margin-left:8px}
+.tl li{position:relative;margin-bottom:14px;animation:pop .55s cubic-bezier(.3,1.6,.5,1) both;animation-delay:calc(var(--i)*70ms)}
+.tl li::before{content:"";position:absolute;left:-35px;top:14px;width:18px;height:18px;border-radius:50%;background:var(--yellow);border:3px solid var(--ink)}
+.tl li.must::before{background:var(--coral)}
+.tl .card{padding:12px 14px;box-shadow:0 4px 0 var(--ink)}
+.time{font-size:12px;border:3px solid var(--ink);border-radius:999px;padding:0 10px;background:var(--paper);margin-right:6px}
+.tl h4{margin:6px 0 2px;font-size:17px}
+.tl p{margin:0;font-size:14px}
+.tag{display:inline-block;font-size:12px;border:2px solid var(--ink);border-radius:999px;padding:0 9px;margin:2px 4px 2px 0}
+.t-walk{background:var(--green)}.t-bus{background:var(--yellow)}.t-train{background:var(--coral)}.t-ship{background:var(--blue)}.t-tour{background:#fff}.t-warn{background:#fff;border-style:dashed}
+.box{margin:0 0 16px;font-size:14px;animation:pop .55s cubic-bezier(.3,1.6,.5,1) both;box-shadow:0 4px 0 var(--ink)}.box ul{margin:6px 0 0;padding-left:18px}.box li{margin:3px 0}.go{background:#EAF5FA}.pb{background:#FFF4D6;border-style:dashed;margin:6px 0 0}.eat{display:grid;gap:10px}.eat .card{padding:12px 14px;box-shadow:0 4px 0 var(--ink)}.eat h3{margin:0 0 6px;font-size:17px}.eat ul{margin:0;padding-left:18px;font-size:14px}.eat li{margin:3px 0}.inf{font-size:13px;margin-top:6px;border-top:2px dashed var(--ink);padding-top:6px}.inf div{margin:2px 0}.inf .no{background:var(--paper);border-radius:12px;padding:4px 8px;margin-top:6px}.inf .wn{background:#FDE3DE;border:2px solid var(--ink);border-radius:12px;padding:6px 8px;margin-top:6px}.must-b{display:inline-block;font-size:12px;background:var(--coral);border:2px solid var(--ink);border-radius:999px;padding:0 9px;margin-right:4px;animation:wob 2.4s ease-in-out infinite}
+@keyframes pop{0%{opacity:0;transform:translateY(24px) scale(.88)}65%{opacity:1;transform:translateY(-5px) scale(1.03)}100%{transform:none}}
+@keyframes wob{50%{transform:rotate(-5deg) scale(1.06)}}
+/* todo */
+.todo{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.todo label{display:flex;gap:12px;align-items:center;padding:8px 12px;border:3px solid var(--ink);border-radius:18px;background:var(--paper);cursor:pointer}
+.todo input{appearance:none;flex:none;width:26px;height:26px;border:3px solid var(--ink);border-radius:9px;background:#fff;margin:0;display:grid;place-content:center}
+.todo input:checked{background:var(--green)}
+.todo input:checked::after{content:"✓";font-size:18px;line-height:1}
+.todo input:checked+span{text-decoration:line-through;opacity:.55}
+.prog{height:16px;border:3px solid var(--ink);border-radius:999px;background:#fff;overflow:hidden;margin-bottom:12px}
+.prog i{display:block;height:100%;width:0;background:var(--blue);border-right:3px solid var(--ink);transition:width .4s cubic-bezier(.3,1.6,.5,1)}
+.hotel{margin-bottom:14px}
+.hotel .d{display:inline-block;background:var(--yellow);border:3px solid var(--ink);border-radius:999px;padding:0 12px;font-size:13px}
+.hotel h3{margin:8px 0 2px;font-size:18px}
+.hotel p{margin:0;font-size:14px}
+.tip{background:var(--yellow)}
+footer{text-align:center;font-size:13px;margin-top:30px}
+/* anim */
+.cloud{animation:drift 14s ease-in-out infinite alternate}.cloud.b{animation-duration:19s;animation-direction:alternate-reverse}
+.smoke{animation:rise 4s ease-out infinite;transform-box:fill-box;transform-origin:center}.smoke.b{animation-delay:2s}
+.sun{animation:bob 4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.train{animation:go 9s linear infinite}
+@keyframes drift{to{transform:translateX(26px)}}
+@keyframes rise{0%{opacity:0;transform:translateY(8px) scale(.6)}30%{opacity:1}100%{opacity:0;transform:translateY(-22px) scale(1.2)}}
+@keyframes bob{50%{transform:scale(1.07)}}
+@keyframes go{from{transform:translateX(-120px)}to{transform:translateX(380px)}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.train{transform:translateX(120px)}}
+</style>
+</head>
+<body>
+<nav>
+<a href="#top">首頁</a><a href="#flight">航班</a><a href="#plan">行程</a><a href="#eat">吃玩</a><a href="#todo">待辦</a><a href="#stay">住宿</a>
+</nav>
+<main id="top">
+<div class="card hero">
+<svg viewBox="0 0 360 230" role="img" aria-label="熊本城、櫻島火山與新幹線的插畫">
+<rect width="360" height="230" fill="#A8D3E6"/>
+<circle class="sun" cx="300" cy="46" r="24" fill="#F2A497" stroke="#3E3A39" stroke-width="3"/>
+<g class="cloud" fill="#fff" stroke="#3E3A39" stroke-width="3"><path d="M30 60h62a15 15 0 0 0-4-26 20 20 0 0 0-36-4 17 17 0 0 0-22 30z"/></g>
+<g class="cloud b" fill="#fff" stroke="#3E3A39" stroke-width="3"><path d="M190 40h46a12 12 0 0 0-3-20 15 15 0 0 0-28-3 13 13 0 0 0-15 23z"/></g>
+<path d="M175 170 218 92q8-12 16 0l50 78z" fill="#B9DAA5" stroke="#3E3A39" stroke-width="3" stroke-linejoin="round"/>
+<path d="M206 108h40" stroke="#3E3A39" stroke-width="3" stroke-linecap="round"/>
+<circle class="smoke" cx="226" cy="84" r="9" fill="#fff" stroke="#3E3A39" stroke-width="3"/>
+<circle class="smoke b" cx="232" cy="80" r="7" fill="#fff" stroke="#3E3A39" stroke-width="3"/>
+<g stroke="#3E3A39" stroke-width="3" stroke-linejoin="round">
+<path d="M40 170v-26h-8l8-12h110l8 12h-8v26z" fill="#9a948f" opacity="0"/>
+<path d="M36 170l8-40h92l8 40z" fill="#9a948f" stroke="none"/>
+<path d="M36 170l8-40h92l8 40z" fill="#8f8a85"/>
+<rect x="56" y="108" width="68" height="26" fill="#FFFCF6"/>
+<rect x="68" y="86" width="44" height="22" fill="#FFFCF6"/>
+<path d="M48 108l42-26 42 26z" fill="#3E3A39"/>
+<path d="M60 86l30-20 30 20z" fill="#3E3A39"/>
+<path d="M82 66l8-14 8 14z" fill="#F6D27A"/>
+<rect x="84" y="114" width="12" height="16" fill="#F6D27A"/>
+<rect x="76" y="92" width="8" height="8" fill="#A8D3E6"/><rect x="96" y="92" width="8" height="8" fill="#A8D3E6"/>
+</g>
+<path d="M0 170h360v60H0z" fill="#B9DAA5" stroke="#3E3A39" stroke-width="3"/>
+<path d="M0 196h360" stroke="#3E3A39" stroke-width="3"/><path d="M0 204h360" stroke="#3E3A39" stroke-width="3" stroke-dasharray="10 8"/>
+<g class="train" stroke="#3E3A39" stroke-width="3" stroke-linejoin="round">
+<path d="M0 192v-14q0-10 12-10h70q22 0 40 24z" fill="#FFFCF6"/>
+<rect x="8" y="176" width="14" height="8" rx="3" fill="#A8D3E6"/><rect x="28" y="176" width="14" height="8" rx="3" fill="#A8D3E6"/><rect x="48" y="176" width="14" height="8" rx="3" fill="#A8D3E6"/>
+<path d="M0 186h122" stroke="#F2A497" stroke-width="5"/>
+<path d="M0 192h122" />
+</g>
+<g fill="#F2A497" stroke="#3E3A39" stroke-width="3"><circle cx="305" cy="150" r="9"/><rect x="302" y="158" width="6" height="14" fill="#3E3A39"/><circle cx="330" cy="158" r="7" fill="#F6D27A"/><rect x="327" y="164" width="6" height="8" fill="#3E3A39"/></g>
+</svg>
+<div class="tx">
+<h1>熊本・鹿兒島<br>6 日小旅行</h1>
+<p>2026.11.12（四）– 11.17（二）</p>
+<div class="count" aria-live="polite"><span id="cdLabel">距離出發</span><b id="cd">–</b><span id="cdUnit">天</span></div>
+</div>
+</div>
+
+<section id="flight">
+<h2>✈️ 航班</h2>
+<div class="card fl">
+<div class="leg"><h3>去程 <span class="pill">11/12（四）</span></h3>
+<div class="route"><div>台北<small>TPE</small></div>
+<svg viewBox="0 0 100 26" preserveAspectRatio="none"><path d="M2 13h84" stroke="#3E3A39" stroke-width="3" stroke-dasharray="7 6" stroke-linecap="round"/><path d="M80 5l16 8-16 8z" fill="#F2A497" stroke="#3E3A39" stroke-width="3" stroke-linejoin="round"/></svg>
+<div style="text-align:right">熊本<small>KMJ</small></div></div>
+<input data-k="f1" value="JX846｜07:30 ➔ 10:45（暫定）" placeholder="補上起降時間" aria-label="去程航班資訊"></div>
+<div class="leg"><h3>回程 <span class="pill">11/17（二）</span></h3>
+<div class="route"><div>熊本<small>KMJ</small></div>
+<svg viewBox="0 0 100 26" preserveAspectRatio="none"><path d="M2 13h84" stroke="#3E3A39" stroke-width="3" stroke-dasharray="7 6" stroke-linecap="round"/><path d="M80 5l16 8-16 8z" fill="#A8D3E6" stroke="#3E3A39" stroke-width="3" stroke-linejoin="round"/></svg>
+<div style="text-align:right">台北<small>TPE</small></div></div>
+<input data-k="f2" value="JX847｜11:55 ➔ 13:20（暫定）" placeholder="補上起降時間" aria-label="回程航班資訊"></div>
+</div>
+</section>
+
+<section id="plan">
+<h2>🗓️ 每日行程</h2>
+<div class="tabs" role="tablist" id="tabs"></div>
+<div id="panel" role="tabpanel"></div>
+</section>
+
+<section id="eat">
+<h2>🍜 必吃必玩</h2>
+<div class="eat">
+<div class="card" style="background:#FFF4D6"><h3>熊本</h3><ul>
+<li><b>馬刺（馬肉料理）</b>：下通一帶專門店多，例：菅乃屋 銀座通り店，馬刺 6 種約 ¥2,660。</li>
+<li><b>熊本拉麵</b>：豚骨湯頭配蒜油，逛街時隨時可吃。</li>
+<li><b>太平燕</b>：熊本特色湯麵，老店會樂園是發源地之一。</li>
+<li><b>赤牛丼、辛子蓮藕</b>：城彩苑「桜の小路」有赤牛丼；蓮藕很適合買當伴手禮。</li>
+<li><b>いきなり団子</b>：地瓜＋紅豆的熊本點心，城彩苑約 ¥150 起。</li>
+<li><b>必玩</b>：搭市電看街景、熊本城＋城彩苑、熊本市役所 14 樓免費展望廳、水前寺成趣園的富士山造景、縣廳魯夫像。</li>
+</ul></div>
+<div class="card" style="background:#EAF5FA"><h3>鹿兒島</h3><ul>
+<li><b>黑豬肉</b>：涮涮鍋、燒肉、炸豬排都推，天文館通一帶店很多。</li>
+<li><b>白熊冰</b>：天文館的招牌甜點，晚餐後再來一碗。</li>
+<li><b>薩摩揚（炸魚板）</b>：現炸最好吃，邊走邊吃。</li>
+<li><b>船上烏龍麵</b>：櫻島渡輪的名物，15 分鐘航程剛好吃完。</li>
+<li><b>必玩</b>：櫻島渡輪、100 公尺長的免費足湯、赤水與有村展望所、仙巖園看櫻島、城山展望台夜景。</li>
+</ul></div>
+</div>
+<p style="font-size:13px;margin:8px 4px 0">🍱 店家營業時間與公休日會變動，去之前建議在地圖上確認。</p>
+</section>
+
+<section id="todo">
+<h2>✅ 行前待辦</h2>
+<div class="card">
+<div class="prog"><i id="bar"></i></div>
+<ul class="todo" id="todoList"></ul>
+</div>
+</section>
+
+<section id="stay">
+<h2>🏨 住宿資訊</h2>
+<div class="card hotel"><span class="d">Day 1 – 2 ・ 11/12–11/14</span><h3>OMO5 熊本 by 星野集團</h3><p>在下通・上通商店街的主街上，逛街買東西超方便，熊本城步行約 10 分。</p><p style="margin-top:6px">📍 熊本市中央區手取本町 5-1<br>🕒 入住 15:00（至 24:00）／退房 11:00<br>📞 +81 50-3134-8095</p></div>
+<div class="card hotel" style="background:#F2FAFD"><span class="d">Day 3 ・ 11/14–11/15</span><h3>索拉瑞亞西鐵飯店 鹿兒島</h3><p>ソラリア西鉄ホテル鹿児島｜正對鹿兒島中央站，東口步行約 2 分，搭新幹線進出超方便。</p><p style="margin-top:6px">📍 鹿兒島市中央町 11 ・ 🕒 入住 15:00／退房 11:00</p></div>
+<div class="card hotel"><span class="d">Day 4 – 5 ・ 11/15–11/17</span><h3>THE BLOSSOM KUMAMOTO 熊本站前花開酒店</h3><p>JR 熊本站直通，位於站體高樓層（9–12 樓），有大浴場與健身房。</p><p style="margin-top:6px">📍 熊本市西區春日 3-15-26<br>🕒 入住 15:00（至 24:00）／退房 11:00<br>📞 096-327-8763</p></div>
+<div class="card tip"><b>💡 行前貼心提醒</b><p style="margin:6px 0 0;font-size:14px">熊本與鹿兒島之間搭新幹線僅需約 45 分鐘，可評估購買 JR 九州鐵路周遊券。</p></div>
+</section>
+<footer>🌸 旅途愉快，平安賦歸 🌸</footer>
+</main>
+
+<script>
+const DAYS=[
+{d:"11/12",w:"四",t:"抵達熊本 ➔ 水前寺 & 縣廳漫遊",items:[
+{w:"抵達",tags:[["巴士","bus"]],h:"🛬 抵達熊本・前往飯店",p:"JX846 預計 10:45 抵達阿蘇熊本機場，搭巴士／接駁車前往市區飯店。",ad:"OMO5 熊本：熊本市中央區手取本町 5-1",hr:"Check-in 15:00 起・Check-out 11:00",no:"機場到市區巴士車程約 40–60 分，票價請現場確認；太早到可先寄放行李。"},
+{w:"下午",tags:[["市電","walk"],["步行","walk"]],h:"🏯 水前寺成趣園",p:"漫步精緻的回遊式日式庭園，感受優雅景緻。",must:1,ad:"熊本市中央區水前寺公園 8-1",hr:"8:30–17:00（最終入園 16:30）",fe:"大人 ¥400／小中學生 ¥200",no:"市電「水前寺公園」站步行約 3–6 分。11 月日落早，建議下午早點到。"},
+{w:"下午",tags:[["市電","walk"]],h:"🌳 熊本縣廳",p:"欣賞秋季金黃銀杏大道，打卡航海王魯夫銅像。",must:1,ad:"熊本市中央區水前寺 6-18-1",fe:"戶外免費",no:"銀杏黃葉進度依當年天氣而定，行前可看當地最新報導。"},
+{w:"晚上",tags:[["步行","walk"]],h:"🛍️ 下通、通町筋商店街",p:"散策逛街，享用在地名產（熊本拉麵或馬肉料理）。",ad:"熊本市中央區下通・上通一帶（OMO5 就在商店街旁）",hr:"各店不同",no:"例：馬肉料理 菅乃屋 銀座通り店（下通 1-9-1）11:30–14:00、17:00–23:00，馬刺 6 種約 ¥2,660。"}]},
+{d:"11/13",w:"五",t:"阿蘇全日遊：觀光列車去、特急回",items:[
+{w:"9:57",tags:[["觀光列車","train"]],h:"🚂 あそぼーい！1 號出發",p:"豐肥本線的觀光列車，有大窗景的 Panorama 座位。",must:1,ad:"JR 熊本站 ➔ 阿蘇站（11:27 到）",fe:"熊本–阿蘇 ¥3,080（大人）",no:"全車指定席，乘車日 1 個月前 10:00 開賣，已可購買，需免費 JR 九州 Web 會員。11/13 是週五，我讀不到官網運轉日曆，請自行確認。"},
+{w:"11:50",tags:[["產交巴士","bus"]],h:"🚌 阿蘇站前 ➔ 草千里",p:"出站後在「阿蘇駅前」站搭阿蘇登山線第 3 班。",ad:"阿蘇駅前 11:50 ➔ 草千里阿蘇火山博物館前 12:16",no:"時刻為 2026/5/11 改正版，客滿時可能搭不上，建議提早排隊。11:27 到站後有約 20 分鐘可買點心。"},
+{w:"12:16",tags:[["步行","walk"]],h:"🌾 草千里之濱＋阿蘇火山博物館",p:"欣賞秋季金黃芒草與遼闊草原，午餐也安排在這一帶。",must:1,ad:"熊本縣阿蘇市赤水",hr:"建議停留到 14:20 左右",fe:"草千里免費；博物館費用請現場確認",no:"在火口規制範圍外，目前可前往。"},
+{w:"—",tags:[["已封閉","tour"]],h:"🌋 阿蘇中岳火山口（目前封閉）",p:"近距離目睹活火山的壯麗氣勢。",warn:1,ad:"熊本縣阿蘇市（阿蘇山上）",no:"⚠️ 2026/10 月初的公開資訊：噴火警戒 Lv2，火口 1 公里內禁止進入，無法見學，接駁巴士也停駛。出發前請查 aso-volcano.jp，若重新開放再臨時加入。"},
+{w:"14:30",tags:[["產交巴士","bus"]],h:"🚌 草千里 ➔ 阿蘇站前",p:"搭回程第 6 班。",ad:"草千里阿蘇火山博物館前 14:30 ➔ 阿蘇駅前 14:58",no:"想多留一點可搭第 7 班：草千里 14:55 ➔ 阿蘇駅前 15:23，這是最後一班，千萬別錯過。"},
+{w:"15:52",tags:[["JR","train"],["步行","walk"]],h:"⛩️ 阿蘇神社 & 水基湧水通",p:"漫步古樸老街，品嚐在地小吃與甘甜泉水。",ad:"JR 阿蘇 15:52 ➔ 宮地約 15:57；神社從宮地站步行約 15–20 分",fe:"參拜免費",no:"我只確認了阿蘇 ➔ 宮地的班次，回程班次沒查到，請先查好；時間太趕就改成在阿蘇站周邊休息，等 17:20 的特急。"},
+{w:"17:20",tags:[["特急","train"]],h:"🚆 九州橫斷特急 ➔ 熊本",p:"約 1 小時 15 分，預計 18:35 左右到熊本站，再搭市電回 OMO5。",ad:"JR 阿蘇站 17:20 ➔ 熊本站",no:"17:20 是你提供的時間，我沒查到官方時刻與票價，購票前請確認發車站（阿蘇或宮地）與座位種類。"}]},
+{d:"11/14",w:"六",t:"早起南下鹿兒島 ➔ 仙巖園看表演 & 天文館通",items:[
+{w:"約 8:50",tags:[["新幹線","train"]],h:"🚅 熊本 ➔ 鹿兒島中央",p:"車程約 45 分鐘，9:35 左右抵達。OMO5 約 8:00 要出門。",ad:"索拉瑞亞西鐵飯店：鹿兒島市中央町 11（步行約 2 分）",hr:"Check-in 15:00，Check-out 11:00",no:"先請櫃檯寄放行李。新幹線實際班次我沒查到，請先查好。"},
+{w:"約 10:00",tags:[["巴士","bus"]],h:"🚌 前往仙巖園",p:"搭市區觀光巴士（City View）到「仙巌園前」，約 30 分，預計 10:45 前到。",ad:"鹿兒島市吉野町 9700-1",hr:"9:00–17:00（季節性至 17:20）",fe:"大人 ¥1,600（約 NT$325，含尚古集成館），小孩 ¥800",no:"各資料對御殿是否另收費寫法不同，現場確認。匯率以 1 日圓約 0.203 台幣估算。"},
+{w:"11:30",tags:[["表演","tour"]],h:"🥁 竹徑亭：和蔵（和太鼓・津輕三味線）",p:"11:30–12:00（另有 10:30 場）。和風表演團體，有和太鼓、津輕三味線、尺八、篠笛，還有獅子舞和傘回し等傳統技藝。",must:1,ad:"仙巖園內「竹徑亭」",hr:"和蔵 10:30–11:00、11:30–12:00｜薩摩雅会 13:30–14:00、14:30–15:00",no:"颱風、豪雨、強風時可能中止或改內容。"},
+{w:"12:00",tags:[["步行","walk"]],h:"🍱 園內午餐與散步",p:"在園內用餐，遠眺錦江灣與櫻島。",must:1},
+{w:"13:30",tags:[["表演","tour"]],h:"🎶 竹徑亭：薩摩雅会（雅樂）",p:"13:30–14:00（另有 14:30 場）。鹿兒島在地團體演奏雅樂，是傳承千年以上的日本宮廷音樂，聲音典雅。",must:1,ad:"仙巖園內「竹徑亭」"},
+{w:"15:00",tags:[["步行","walk"]],h:"🏡 尚古集成館與園區",p:"參觀薩摩藩的近代化歷史，逛逛薩摩切子工房（免費見學）。",ad:"鹿兒島市吉野町 9688-24（薩摩ガラス工芸）",hr:"工房見學 9:00–16:30"},
+{w:"16:30",tags:[["巴士","bus"]],h:"🛏️ 回市區 check-in",p:"搭巴士回鹿兒島中央站，到索拉瑞亞西鐵休息。"},
+{w:"晚上",tags:[["市電","walk"]],h:"🍧 天文館通",p:"鹿兒島最熱鬧商圈，享用黑豬肉火鍋／燒肉，品嚐正宗白熊冰。",must:1,ad:"鹿兒島市天文館（市電「天文館通」站）",hr:"各店不同",no:"市電・市巴・觀光巴士一日券大人 ¥600。"}]},
+{d:"11/15",w:"日",t:"仙巖園芝生表演 ➔ 櫻島火山 ➔ 返回熊本",items:[
+{w:"9:00",tags:[["巴士","bus"]],h:"🚌 退房、再訪仙巖園",p:"11:00 退房，先請櫃檯寄放行李，搭巴士到仙巖園，9:45 前到。",ad:"仙巖園：鹿兒島市吉野町 9700-1",hr:"9:00 開園",fe:"可能需再買一次入園券，現場確認"},
+{w:"10:20",tags:[["表演","tour"]],h:"🦁 御殿前庭芝生：獅子舞",p:"10:20–10:40，仙巖園傳承的獅子舞，祈求驅邪消災；傳說被獅子咬頭，一年平安健康。13:20 還有一場，我們選早場。",must:1,ad:"御殿前庭芝生",hr:"10:20–10:40／13:20–13:40",no:"雨天移到竹徑亭舉行。"},
+{w:"11:00",tags:[["巴士","bus"]],h:"🍜 回市區午餐",p:"回到中央站或天文館附近吃午餐，再前往渡輪。"},
+{w:"12:30",tags:[["市電","walk"],["渡輪","ship"]],h:"⛴️ 櫻島渡輪",p:"市電到「水族館口」，步行約 7 分到乘船處，搭船約 15 分。",ad:"鹿兒島港：鹿兒島市本港新町 4-1 ➔ 櫻島港",hr:"24 小時營運，約 15 分鐘一班",fe:"大人約 ¥200–250（各來源不同）",no:"船上的烏龍麵是名物。"},
+{w:"13:15",tags:[["巴士","bus"],["步行","walk"]],h:"🌋 赤水展望廣場・有村熔岩展望所",p:"近看火山與熔岩原，景色壯闊。",must:1,ad:"赤水：櫻島赤水町 3629-3／有村：櫻島有村町",fe:"戶外展望，一般免費",no:"建議搭島上循環巴士，上車前先確認班次。"},
+{w:"15:00",tags:[["步行","walk"]],h:"♨️ 溶岩なぎさ公園足湯",p:"長約 100 公尺的天然溫泉足湯，邊泡邊看海灣。",ad:"櫻島橫山町 1722-3（離櫻島港步行約 10 分）",hr:"9:00 至日落",fe:"免費",no:"記得帶小毛巾。"},
+{w:"約 16:15",tags:[["渡輪","ship"],["新幹線","train"]],h:"🚅 取行李、搭新幹線回熊本",p:"渡輪回市區，取行李後搭新幹線，入住站體直通的 THE BLOSSOM。",ad:"THE BLOSSOM KUMAMOTO：熊本市西區春日 3-15-26",hr:"Check-in 15:00（最晚 24:00）",no:"新幹線班次我沒查到，建議 17:30 前上車。"}]},
+{d:"11/16",w:"一",t:"熊本城巡禮 & 車站自由血拼",items:[
+{w:"上午",tags:[["市電","walk"],["步行","walk"]],h:"🏯 熊本城",p:"參觀壯觀的天守閣，也能看到修復中的石垣。",must:1,ad:"熊本市中央區本丸 1-1",hr:"平時 9:00–17:00（最終入園 16:00），依季節調整",fe:"高中以上 ¥800／小中學生 ¥300（參考價）",no:"2026 年 7 月熊本地震後於 8/13 重新開放，小天守 1 樓部分區域曾限制進入，行前請查 castle.kumamoto-guide.jp。市電「熊本城・市役所前」步行約 10 分。"},
+{w:"中午",tags:[["步行","walk"]],h:"🍡 櫻之馬場 城彩苑",p:"品嚐熊本在地美食、買伴手禮。",ad:"熊本市中央區二之丸 1-1-2",hr:"伴手禮 9:00–18:00／餐廳 11:00–18:00（最後點餐）",fe:"入場免費；熊本城博物館「わくわく座」整修中，預計 12 月才重開，11 月無法入內",no:"可搭熊本城周遊巴士「しろめぐりん」。"},
+{w:"下午",tags:[["步行","walk"]],h:"🏬 AMU Plaza 熊本",p:"與車站共構的大型購物中心，輕鬆採買伴手禮與逛街。",ad:"JR 熊本站大樓（飯店正下方）",hr:"依樓層與店家不同，出發前查官網",no:"逛完可直接回飯店放東西。"},
+{w:"傍晚",tags:[["步行","walk"]],h:"☕ 愜意下午茶",p:"車站周邊悠閒小憩，享有輕鬆不趕路的自由時光。"}]},
+{d:"11/17",w:"二",t:"最後巡禮 ➔ 愉快賦歸",items:[
+{w:"早上",tags:[["步行","walk"]],h:"🍳 飯店精緻早餐",p:"進行最後整理，並買齊遺漏的伴手禮。",hr:"飯店早餐自助餐 6:30–10:30（付費方案依訂房而定）"},
+{w:"上午",tags:[["巴士","bus"]],h:"✈️ 前往熊本機場",p:"JX847 預計 11:55 起飛，建議約 9:00 前從飯店出發。",ad:"阿蘇熊本機場（益城町）",no:"建議起飛前至少 2 小時抵達機場。"}]}
+];
+const GO=[
+["機場 ➔ OMO5：搭機場利木津巴士到市區（「通町筋」或「桜町」一帶下車，約 40–60 分），再步行 5–10 分，下車點請用地圖確認。","OMO5 ➔ 水前寺成趣園：步行到市電「通町筋」站，搭往健軍町方向到「水前寺公園」站，再走約 3–6 分。","成趣園 ➔ 縣廳：步行約 20 分（約 1.5 公里），或查地圖搭公車。","晚上在下通・上通商店街步行即可回 OMO5。","小技巧：熊本市電一日券約 ¥500，Day 1 與 Day 5 都好用（價格以現場為準）。"],
+["OMO5 ➔ JR 熊本站：搭市電約 15–20 分到「熊本駅前」，建議 9:15 前到站。","去程：あそぼーい！1 號 熊本 9:57 ➔ 阿蘇 11:27。","阿蘇站前搭產交巴士：11:50 ➔ 草千里 12:16；回程 14:30 ➔ 阿蘇駅前 14:58（最後一班 14:55 ➔ 15:23）。","阿蘇神社：15:52 JR 阿蘇 ➔ 宮地，再步行約 15–20 分，回程班次要先查。","回程：17:20 九州橫斷特急 ➔ 熊本，再搭市電回 OMO5。"],
+["OMO5 ➔ 熊本站：市電約 15–20 分，8:00 前出門，搭約 8:50 的新幹線，約 45 分到鹿兒島中央。","索拉瑞亞西鐵就在中央站旁，先寄放行李，15:00 才能 check-in。","➔ 仙巖園：搭市區觀光巴士（City View）到「仙巌園前」，約 30 分，查好回程末班。","回市區後搭市電到「天文館通」。","小技巧：市電・市巴・City View 一日券大人 ¥600，Day 3、Day 4 都划算。"],
+["索拉瑞亞西鐵 ➔ 仙巖園：搭 City View 巴士，9:45 前到，趕 10:20 的表演。","仙巖園 ➔ 渡輪：搭巴士回市區，市電到「水族館口」，步行約 7 分到乘船處。","渡輪約 15 分，24 小時營運；赤水展望廣場距港步行約 30 分，建議搭島上循環巴士。","回程：渡輪 ➔ 市電 ➔ 鹿兒島中央站取行李 ➔ 新幹線約 45 分回熊本，THE BLOSSOM 就在站體裡。"],
+["THE BLOSSOM ➔ 熊本城：到站前市電站搭到「熊本城・市役所前」約 14–17 分，再步行 7–10 分；或搭熊本城周遊巴士「しろめぐりん」到「桜の馬場城彩苑」。","城彩苑與熊本城之間有免費接駁車，約 15 分一班。","回程搭市電或巴士回熊本站，AMU Plaza 就在飯店下方。"],
+["THE BLOSSOM ➔ 熊本機場：熊本站前搭機場利木津巴士，約 40–60 分。","JX847 11:55 起飛，建議搭 8:30 前後的班次，起飛前 2 小時到機場，實際班次請先查時刻表。"]
+];
+const PB=[
+["下雨：熊本市現代美術館距 OMO5 約 200 公尺，下通・上通有頂商店街可逛一整天。","日落提早：縣廳銀杏可改成隔天早上，或 Day 5 順路去。"],
+["火口封閉（目前狀態）：重點放在草千里與阿蘇火山博物館，神社與水基湧水通順路。","あそぼーい！當天不開或客滿：改搭普通列車，熊本 ➔ 肥後大津換車 ➔ 阿蘇，約 1.5 小時、單程 ¥1,300，先查時刻。","巴士客滿或天氣差：改去阿蘇神社與水基湧水通，搭 12:10 的 JR 阿蘇 ➔ 宮地。","整天不去阿蘇：把 Day 5 的熊本城＋城彩苑搬到今天，Day 5 改輕鬆購物。"],
+["下雨：11/14 表演本來就在竹徑亭，不受影響；仙巖園內有尚古集成館可躲雨。","颱風或強風表演中止：改看尚古集成館與薩摩切子工房，下午回天文館有頂商店街。","早起太累：只看 13:30 或 14:30 的薩摩雅会，新幹線改成約 10:00 出發。"],
+["🌋 如果櫻島火山爆發或大量降灰：改走市區（10:20 獅子舞照看）","10:45 尚古集成館 ➔ 11:30 搭巴士回市區午餐","13:15 市電到「水族館口」➔ 13:30–15:30 逛水族館（9:30–18:00，最後入館 17:00，大人 ¥2,000）","15:45 選配：搭渡輪來回約 30 分，在船上看櫻島、吃烏龍麵","16:30 天文館買伴手禮 ➔ 17:00 回飯店取行李 ➔ 17:30 前搭新幹線","⚠️ 注意事項","櫻島目前警戒 Lv3，小噴火常見，景點與渡輪平常照開。","出發前一晚與當天早上，查氣象廳噴火警報與降灰預報。","在島上遇到大噴火：進建築躲避、戴口罩，聽指示回港。","新幹線預留緩衝，17:30 前上車；下載 Safety tips 防災 App。","沒趕上 10:20 場可改看 13:20 場；下雨獅子舞改在竹徑亭。"],
+["熊本城部分區域關閉或排隊：改逛城彩苑「桜の小路」（わくわく座整修中），再去熊本市役所 14 樓免費展望廳看城景。","下雨：整天待在 AMU Plaza 逛街、下午茶。"],
+["航班時間有變：早餐後在 AMU Plaza 補買伴手禮，行李寄放飯店或站內置物櫃。"]
+];
+const tabs=document.getElementById('tabs'),panel=document.getElementById('panel');
+function show(n){
+ [...tabs.children].forEach((b,i)=>b.setAttribute('aria-selected',i===n));
+ const D=DAYS[n];
+ panel.innerHTML=`<div class="dayhead"><h3>DAY ${n+1}・${D.d}（${D.w}）</h3><p>${D.t}</p></div><div class="card box go"><b>🚇 大眾運輸路線</b><ul>${GO[n].map(x=>`<li>${x}</li>`).join('')}</ul></div><ol class="tl">`+
+ D.items.map((x,i)=>`<li class="${x.must?'must':''}" style="--i:${i}"><div class="card"><span class="time">${x.w}</span>${x.tags.map(t=>`<span class="tag t-${t[1]}">${t[0]}</span>`).join('')}${x.must?'<span class="must-b">★ 必去</span>':''}${x.warn?'<span class="tag t-warn">⚠️ 目前封閉</span>':''}<h4>${x.h}</h4><p>${x.p}</p>${(x.ad||x.hr||x.fe||x.no)?`<div class="inf">${x.ad?`<div>📍 ${x.ad}</div>`:''}${x.hr?`<div>🕒 ${x.hr}</div>`:''}${x.fe?`<div>🎫 ${x.fe}</div>`:''}${x.no?`<div class="${x.warn?'wn':'no'}">${x.no}</div>`:''}</div>`:''}</div></li>`).join('')+`</ol><div class="card box pb"><b>🅱️ Plan B 備案</b><ul>${PB[n].map(x=>/^(🌋|⚠️)/.test(x)?`<li style="list-style:none;margin-left:-18px;margin-top:8px"><b>${x}</b></li>`:`<li>${x}</li>`).join('')}</ul></div>`;
+}
+DAYS.forEach((D,i)=>{const b=document.createElement('button');b.role='tab';b.innerHTML=`Day ${i+1}<small>${D.d}（${D.w}）</small>`;b.onclick=()=>show(i);tabs.appendChild(b)});
+show(0);
+/* countdown */
+(function(){
+ const s=new Date('2026-11-12T00:00:00+08:00'),e=new Date('2026-11-18T00:00:00+08:00'),n=new Date();
+ const L=document.getElementById('cdLabel'),C=document.getElementById('cd'),U=document.getElementById('cdUnit');
+ if(n<s){C.textContent=Math.ceil((s-n)/864e5)}
+ else if(n<e){L.textContent='旅程進行中';C.textContent='Day '+(Math.floor((n-s)/864e5)+1);U.textContent=''}
+ else{L.textContent='旅程圓滿結束';C.textContent='🌸';U.textContent=''}
+})();
+/* storage helpers */
+const st={get(k){try{return JSON.parse(localStorage.getItem(k))}catch(e){return null}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+document.querySelectorAll('[data-k]').forEach(i=>{const v=st.get('kt-'+i.dataset.k);if(v)i.value=v;i.oninput=()=>st.set('kt-'+i.dataset.k,i.value)});
+const TODO=['護照（效期 6 個月以上）','Visit Japan Web 入境登錄','機票與訂房憑證存手機','日幣現金與信用卡','eSIM／上網方案','評估 JR 九州鐵路周遊券','行動電源與轉接頭','保暖外套（阿蘇早晚較涼）','下載 Safety tips 防災 App、開緊急速報','櫻島當天早上查噴火警報與降灰預報'];
+const saved=st.get('kt-todo')||[];
+const ul=document.getElementById('todoList'),bar=document.getElementById('bar');
+function upd(){const c=ul.querySelectorAll('input:checked').length;bar.style.width=(c/TODO.length*100)+'%';st.set('kt-todo',[...ul.querySelectorAll('input')].map((x,i)=>x.checked?i:-1).filter(i=>i>=0))}
+TODO.forEach((t,i)=>{const li=document.createElement('li');li.innerHTML=`<label><input type="checkbox"><span>${t}</span></label>`;const c=li.querySelector('input');c.checked=saved.includes(i);c.onchange=upd;ul.appendChild(li)});
+upd();
+</script>
+</body>
+</html>
