@@ -54,7 +54,8 @@ h2{font-size:22px;margin:0 0 12px;display:inline-block;background:var(--green);b
 .tl p{margin:0;font-size:14px}
 .tag{display:inline-block;font-size:12px;border:2px solid var(--ink);border-radius:999px;padding:0 9px;margin:2px 4px 2px 0}
 .t-walk{background:var(--green)}.t-bus{background:var(--yellow)}.t-train{background:var(--coral)}.t-ship{background:var(--blue)}.t-tour{background:#fff}.t-warn{background:#fff;border-style:dashed}
-.box{margin:0 0 16px;font-size:14px;animation:pop .55s cubic-bezier(.3,1.6,.5,1) both;box-shadow:0 4px 0 var(--ink)}.box ul{margin:6px 0 0;padding-left:18px}.box li{margin:3px 0}.go{background:#EAF5FA}.pb{background:#FFF4D6;border-style:dashed;margin:6px 0 0}.eat{display:grid;gap:10px}.eat .card{padding:12px 14px;box-shadow:0 4px 0 var(--ink)}.eat h3{margin:0 0 6px;font-size:17px}.eat ul{margin:0;padding-left:18px;font-size:14px}.eat li{margin:3px 0}.inf{font-size:13px;margin-top:6px;border-top:2px dashed var(--ink);padding-top:6px}.inf div{margin:2px 0}.inf .no{background:var(--paper);border-radius:12px;padding:4px 8px;margin-top:6px}.inf .wn{background:#FDE3DE;border:2px solid var(--ink);border-radius:12px;padding:6px 8px;margin-top:6px}.must-b{display:inline-block;font-size:12px;background:var(--coral);border:2px solid var(--ink);border-radius:999px;padding:0 9px;margin-right:4px;animation:wob 2.4s ease-in-out infinite}
+.box{margin:0 0 16px;font-size:14px;animation:pop .55s cubic-bezier(.3,1.6,.5,1) both;box-shadow:0 4px 0 var(--ink)}.box ul{margin:6px 0 0;padding-left:18px}.box li{margin:3px 0}.go{background:#EAF5FA}.pb{background:#FFF4D6;border-style:dashed;margin:6px 0 0}.eat{display:grid;gap:10px}.eat .card{padding:12px 14px;box-shadow:0 4px 0 var(--ink)}.eat h3{margin:0 0 6px;font-size:17px}.eat ul{margin:0;padding-left:18px;font-size:14px}.eat li{margin:3px 0}details.it summary{list-style:none;cursor:pointer;position:relative;padding-right:24px}details.it summary::-webkit-details-marker,.box summary::-webkit-details-marker{display:none}details.it summary::after{content:"＋";position:absolute;right:0;top:0;font-size:18px}details.it[open] summary::after{content:"－"}.tl summary h4{margin:6px 0 0}.more{margin-top:6px}.box summary{cursor:pointer;list-style:none}.key{background:var(--yellow);border:3px solid var(--ink);border-radius:18px;padding:8px 12px;font-size:14px;margin-bottom:10px}.ctl{display:flex;gap:8px;margin-bottom:12px}.ctl button{font:inherit;font-size:13px;color:var(--ink);background:#fff;border:3px solid var(--ink);border-radius:999px;padding:2px 12px;cursor:pointer}.mp{color:var(--ink);background:var(--blue);border:2px solid var(--ink);border-radius:999px;padding:0 8px;font-size:12px;text-decoration:none;margin-left:4px}.eat summary{cursor:pointer}.eat summary h3{display:inline}
+.inf{font-size:13px;margin-top:6px;border-top:2px dashed var(--ink);padding-top:6px}.inf div{margin:2px 0}.inf .no{background:var(--paper);border-radius:12px;padding:4px 8px;margin-top:6px}.inf .wn{background:#FDE3DE;border:2px solid var(--ink);border-radius:12px;padding:6px 8px;margin-top:6px}.must-b{display:inline-block;font-size:12px;background:var(--coral);border:2px solid var(--ink);border-radius:999px;padding:0 9px;margin-right:4px;animation:wob 2.4s ease-in-out infinite}
 @keyframes pop{0%{opacity:0;transform:translateY(24px) scale(.88)}65%{opacity:1;transform:translateY(-5px) scale(1.03)}100%{transform:none}}
 @keyframes wob{50%{transform:rotate(-5deg) scale(1.06)}}
 /* todo */
@@ -153,21 +154,21 @@ footer{text-align:center;font-size:13px;margin-top:30px}
 <section id="eat">
 <h2>🍜 必吃必玩</h2>
 <div class="eat">
-<div class="card" style="background:#FFF4D6"><h3>熊本</h3><ul>
+<details class="card" style="background:#FFF4D6"><summary><h3>熊本</h3>（點開看）</summary><ul>
 <li><b>馬刺（馬肉料理）</b>：下通一帶專門店多，例：菅乃屋 銀座通り店，馬刺 6 種約 ¥2,660。</li>
 <li><b>熊本拉麵</b>：豚骨湯頭配蒜油，逛街時隨時可吃。</li>
 <li><b>太平燕</b>：熊本特色湯麵，老店會樂園是發源地之一。</li>
 <li><b>赤牛丼、辛子蓮藕</b>：城彩苑「桜の小路」有赤牛丼；蓮藕很適合買當伴手禮。</li>
 <li><b>いきなり団子</b>：地瓜＋紅豆的熊本點心，城彩苑約 ¥150 起。</li>
 <li><b>必玩</b>：搭市電看街景、熊本城＋城彩苑、熊本市役所 14 樓免費展望廳、水前寺成趣園的富士山造景、縣廳魯夫像。</li>
-</ul></div>
-<div class="card" style="background:#EAF5FA"><h3>鹿兒島</h3><ul>
+</ul></details>
+<details class="card" style="background:#EAF5FA"><summary><h3>鹿兒島</h3>（點開看）</summary><ul>
 <li><b>黑豬肉</b>：涮涮鍋、燒肉、炸豬排都推，天文館通一帶店很多。</li>
 <li><b>白熊冰</b>：天文館的招牌甜點，晚餐後再來一碗。</li>
 <li><b>薩摩揚（炸魚板）</b>：現炸最好吃，邊走邊吃。</li>
 <li><b>船上烏龍麵</b>：櫻島渡輪的名物，15 分鐘航程剛好吃完。</li>
 <li><b>必玩</b>：櫻島渡輪、100 公尺長的免費足湯、赤水與有村展望所、仙巖園看櫻島、城山展望台夜景。</li>
-</ul></div>
+</ul></details>
 </div>
 <p style="font-size:13px;margin:8px 4px 0">🍱 店家營業時間與公休日會變動，去之前建議在地圖上確認。</p>
 </section>
@@ -194,38 +195,38 @@ footer{text-align:center;font-size:13px;margin-top:30px}
 const DAYS=[
 {d:"11/12",w:"四",t:"抵達熊本 ➔ 水前寺 & 縣廳漫遊",items:[
 {w:"抵達",tags:[["巴士","bus"]],h:"🛬 抵達熊本・前往飯店",p:"JX846 預計 10:45 抵達阿蘇熊本機場，搭巴士／接駁車前往市區飯店。",ad:"OMO5 熊本：熊本市中央區手取本町 5-1",hr:"Check-in 15:00 起・Check-out 11:00",no:"機場到市區巴士車程約 40–60 分，票價請現場確認；太早到可先寄放行李。"},
+{w:"抵達後",tags:[["JR","train"]],h:"🎫 到 JR 熊本站換 JR Pass、劃位",p:"一次劃好：11/13 あそぼーい！、17:20 特急（宮地若沒窗口）、11/14 與 11/15 新幹線。",must:1,ad:"JR 熊本站（綠色窗口）",no:"JR Pass 到日本才能劃位，あそぼーい！全車指定席，越早越好。"},
 {w:"下午",tags:[["市電","walk"],["步行","walk"]],h:"🏯 水前寺成趣園",p:"漫步精緻的回遊式日式庭園，感受優雅景緻。",must:1,ad:"熊本市中央區水前寺公園 8-1",hr:"8:30–17:00（最終入園 16:30）",fe:"大人 ¥400／小中學生 ¥200",no:"市電「水前寺公園」站步行約 3–6 分。11 月日落早，建議下午早點到。"},
 {w:"下午",tags:[["市電","walk"]],h:"🌳 熊本縣廳",p:"欣賞秋季金黃銀杏大道，打卡航海王魯夫銅像。",must:1,ad:"熊本市中央區水前寺 6-18-1",fe:"戶外免費",no:"銀杏黃葉進度依當年天氣而定，行前可看當地最新報導。"},
-{w:"晚上",tags:[["步行","walk"]],h:"🛍️ 下通、通町筋商店街",p:"散策逛街，享用在地名產（熊本拉麵或馬肉料理）。",ad:"熊本市中央區下通・上通一帶（OMO5 就在商店街旁）",hr:"各店不同",no:"例：馬肉料理 菅乃屋 銀座通り店（下通 1-9-1）11:30–14:00、17:00–23:00，馬刺 6 種約 ¥2,660。"}]},
-{d:"11/13",w:"五",t:"阿蘇全日遊：觀光列車去、特急回",items:[
-{w:"9:57",tags:[["觀光列車","train"]],h:"🚂 あそぼーい！1 號出發",p:"豐肥本線的觀光列車，有大窗景的 Panorama 座位。",must:1,ad:"JR 熊本站 ➔ 阿蘇站（11:27 到）",fe:"熊本–阿蘇 ¥3,080（大人）",no:"全車指定席，乘車日 1 個月前 10:00 開賣，已可購買，需免費 JR 九州 Web 會員。11/13 是週五，我讀不到官網運轉日曆，請自行確認。"},
-{w:"11:50",tags:[["產交巴士","bus"]],h:"🚌 阿蘇站前 ➔ 草千里",p:"出站後在「阿蘇駅前」站搭阿蘇登山線第 3 班。",ad:"阿蘇駅前 11:50 ➔ 草千里阿蘇火山博物館前 12:16",no:"時刻為 2026/5/11 改正版，客滿時可能搭不上，建議提早排隊。11:27 到站後有約 20 分鐘可買點心。"},
-{w:"12:16",tags:[["步行","walk"]],h:"🌾 草千里之濱＋阿蘇火山博物館",p:"欣賞秋季金黃芒草與遼闊草原，午餐也安排在這一帶。",must:1,ad:"熊本縣阿蘇市赤水",hr:"建議停留到 14:20 左右",fe:"草千里免費；博物館費用請現場確認",no:"在火口規制範圍外，目前可前往。"},
-{w:"—",tags:[["已封閉","tour"]],h:"🌋 阿蘇中岳火山口（目前封閉）",p:"近距離目睹活火山的壯麗氣勢。",warn:1,ad:"熊本縣阿蘇市（阿蘇山上）",no:"⚠️ 2026/10 月初的公開資訊：噴火警戒 Lv2，火口 1 公里內禁止進入，無法見學，接駁巴士也停駛。出發前請查 aso-volcano.jp，若重新開放再臨時加入。"},
-{w:"14:30",tags:[["產交巴士","bus"]],h:"🚌 草千里 ➔ 阿蘇站前",p:"搭回程第 6 班。",ad:"草千里阿蘇火山博物館前 14:30 ➔ 阿蘇駅前 14:58",no:"想多留一點可搭第 7 班：草千里 14:55 ➔ 阿蘇駅前 15:23，這是最後一班，千萬別錯過。"},
-{w:"15:52",tags:[["JR","train"],["步行","walk"]],h:"⛩️ 阿蘇神社 & 水基湧水通",p:"漫步古樸老街，品嚐在地小吃與甘甜泉水。",ad:"JR 阿蘇 15:52 ➔ 宮地約 15:57；神社從宮地站步行約 15–20 分",fe:"參拜免費",no:"我只確認了阿蘇 ➔ 宮地的班次，回程班次沒查到，請先查好；時間太趕就改成在阿蘇站周邊休息，等 17:20 的特急。"},
-{w:"17:20",tags:[["特急","train"]],h:"🚆 九州橫斷特急 ➔ 熊本",p:"約 1 小時 15 分，預計 18:35 左右到熊本站，再搭市電回 OMO5。",ad:"JR 阿蘇站 17:20 ➔ 熊本站",no:"17:20 是你提供的時間，我沒查到官方時刻與票價，購票前請確認發車站（阿蘇或宮地）與座位種類。"}]},
+{w:"晚上",tags:[["步行","walk"]],h:"🛍️ 下通、通町筋商店街",p:"散策逛街，享用在地名產（熊本拉麵或馬肉料理）。",ad:"熊本市中央區下通・上通一帶（OMO5 就在商店街旁）",hr:"各店不同",no:"馬肉：菅乃屋 銀座通り店（下通 1-9-1）11:30–14:00、17:00–23:00，馬刺 6 種約 ¥2,660。<br>拉麵：桂花拉麵 本店（市電「熊本城・市役所前」步行約 3 分，096-325-9609），週四 11:00–23:45，資料寫無休；或天外天 熊本駅店（JR 熊本站 1 樓肥後よかモン市場，11:00–22:00，不定休）。"}]},
+{d:"11/13",w:"五",t:"阿蘇神話與老街漫步：觀光列車去、特急回",items:[
+{w:"9:57",tags:[["觀光列車","train"]],h:"🚂 あそぼーい！1 號出發",p:"豐肥本線的觀光列車，有大窗景的 Panorama 座位。",must:1,ad:"JR 熊本站 ➔ 宮地站（11:32 到，阿蘇站 11:27）",fe:"持 JR Pass 免費（需先劃位）",no:"你已確認 11/13 有開車。JR Pass 到日本才能劃位，建議 11/12 到熊本站就先劃好，座位有限。"},
+{w:"11:45",tags:[["步行","walk"]],h:"⛩️ 阿蘇神社",p:"全日本阿蘇神社的總本社，樓門是日本三大樓門之一，2023 年修復完成。",must:1,ad:"阿蘇市一之宮町宮地 3083-1（宮地站步行約 15–20 分）",fe:"參拜免費",no:"樓門在 2016 年熊本地震受損，現在看到的是修復後的樣子。"},
+{w:"12:30",tags:[["步行","walk"]],h:"🍚 門前町午餐・水基湧水通",p:"沿著商店街找 36 處「水基」泉水，午餐吃あか牛丼，邊走邊吃炸赤牛可樂餅，也別錯過高菜飯。",must:1,ad:"阿蘇神社門前町商店街",hr:"各店不同，多為白天營業",no:"赤牛丼等店家的營業與公休日我沒逐家查，去之前在地圖上確認。"},
+{w:"14:00",tags:[["步行","walk"]],h:"☕ 老街散步・咖啡・伴手禮",p:"自由時間，可以多逛一圈、坐下來喝咖啡。",no:"想看火山景色但不想花時間：這段時間就是彈性空檔，不用硬塞行程。"},
+{w:"—",tags:[["已封閉","tour"]],h:"🌋 阿蘇中岳火山口（目前封閉）",p:"本次不安排，草千里也已從行程拿掉。",warn:1,ad:"熊本縣阿蘇市（阿蘇山上）",no:"⚠️ 2026/10 月初的公開資訊：噴火警戒 Lv2，火口 1 公里內禁止進入，接駁巴士也停駛。"},
+{w:"17:20",tags:[["特急","train"]],h:"🚆 九州橫斷特急 ➔ 熊本",p:"約 1 小時 15 分，預計 18:35 左右到熊本站，再搭市電回 OMO5。",ad:"JR 宮地站 17:20 ➔ 熊本站",fe:"持 JR Pass 免費",no:"你打算當天劃位、搭最近一班。宮地站有沒有窗口我沒查到，沒有的話建議 11/12 先在熊本站預約。"}]},
 {d:"11/14",w:"六",t:"早起南下鹿兒島 ➔ 仙巖園看表演 & 天文館通",items:[
-{w:"約 8:50",tags:[["新幹線","train"]],h:"🚅 熊本 ➔ 鹿兒島中央",p:"車程約 45 分鐘，9:35 左右抵達。OMO5 約 8:00 要出門。",ad:"索拉瑞亞西鐵飯店：鹿兒島市中央町 11（步行約 2 分）",hr:"Check-in 15:00，Check-out 11:00",no:"先請櫃檯寄放行李。新幹線實際班次我沒查到，請先查好。"},
-{w:"約 10:00",tags:[["巴士","bus"]],h:"🚌 前往仙巖園",p:"搭市區觀光巴士（City View）到「仙巌園前」，約 30 分，預計 10:45 前到。",ad:"鹿兒島市吉野町 9700-1",hr:"9:00–17:00（季節性至 17:20）",fe:"大人 ¥1,600（約 NT$325，含尚古集成館），小孩 ¥800",no:"各資料對御殿是否另收費寫法不同，現場確認。匯率以 1 日圓約 0.203 台幣估算。"},
-{w:"11:30",tags:[["表演","tour"]],h:"🥁 竹徑亭：和蔵（和太鼓・津輕三味線）",p:"11:30–12:00（另有 10:30 場）。和風表演團體，有和太鼓、津輕三味線、尺八、篠笛，還有獅子舞和傘回し等傳統技藝。",must:1,ad:"仙巖園內「竹徑亭」",hr:"和蔵 10:30–11:00、11:30–12:00｜薩摩雅会 13:30–14:00、14:30–15:00",no:"颱風、豪雨、強風時可能中止或改內容。"},
+{w:"約 8:50",tags:[["新幹線","train"]],h:"🚅 熊本 ➔ 鹿兒島中央",p:"車程約 45 分鐘，9:35 左右抵達。OMO5 約 8:00 要出門。",ad:"索拉瑞亞西鐵飯店：鹿兒島市中央町 11（步行約 2 分）",hr:"Check-in 15:00，Check-out 11:00",no:"櫃檯可寄放行李（已確認）。持 JR Pass 搭乘，11/12 先在熊本站劃位。"},
+{w:"約 10:00",tags:[["JR","train"]],h:"🚃 前往仙巖園",p:"鹿兒島中央站搭 JR 到「仙巌園站」約 7–10 分，約每小時 2 班，持 JR Pass 可搭；出站步行約 3 分，10:30 前就能到。",ad:"鹿兒島市吉野町 9700-1",hr:"9:00–17:00（季節性至 17:20）",fe:"大人 ¥1,600（約 NT$325，含尚古集成館），小孩 ¥800",no:"各資料對御殿是否另收費寫法不同，現場確認。匯率以 1 日圓約 0.203 台幣估算。園內聽說有貓神社，我沒查證，請看園內導覽圖。"},
+{w:"11:30",tags:[["表演","tour"]],h:"🥁 竹徑亭：和蔵（和太鼓・津輕三味線）",p:"11:30–12:00（另有 10:30 場）。和風表演團體，有和太鼓、津輕三味線、尺八、篠笛，還有獅子舞和傘回し等傳統技藝。",must:1,ad:"仙巖園內「竹徑亭」",hr:"和蔵 10:30–11:00、11:30–12:00｜薩摩雅会 13:30–14:00、14:30–15:00",fe:"不用另外收費，有仙巖園門票即可",no:"颱風、豪雨、強風時可能中止或改內容。"},
 {w:"12:00",tags:[["步行","walk"]],h:"🍱 園內午餐與散步",p:"在園內用餐，遠眺錦江灣與櫻島。",must:1},
 {w:"13:30",tags:[["表演","tour"]],h:"🎶 竹徑亭：薩摩雅会（雅樂）",p:"13:30–14:00（另有 14:30 場）。鹿兒島在地團體演奏雅樂，是傳承千年以上的日本宮廷音樂，聲音典雅。",must:1,ad:"仙巖園內「竹徑亭」"},
 {w:"15:00",tags:[["步行","walk"]],h:"🏡 尚古集成館與園區",p:"參觀薩摩藩的近代化歷史，逛逛薩摩切子工房（免費見學）。",ad:"鹿兒島市吉野町 9688-24（薩摩ガラス工芸）",hr:"工房見學 9:00–16:30"},
 {w:"16:30",tags:[["巴士","bus"]],h:"🛏️ 回市區 check-in",p:"搭巴士回鹿兒島中央站，到索拉瑞亞西鐵休息。"},
-{w:"晚上",tags:[["市電","walk"]],h:"🍧 天文館通",p:"鹿兒島最熱鬧商圈，享用黑豬肉火鍋／燒肉，品嚐正宗白熊冰。",must:1,ad:"鹿兒島市天文館（市電「天文館通」站）",hr:"各店不同",no:"市電・市巴・觀光巴士一日券大人 ¥600。"}]},
+{w:"晚上",tags:[["市電","walk"]],h:"🍧 天文館通",p:"鹿兒島最熱鬧商圈，享用黑豬肉火鍋／燒肉，品嚐正宗白熊冰。",must:1,ad:"鹿兒島市天文館（市電「天文館通」站）",hr:"各店不同",no:"11/14 是週六晚上，人多，建議先訂位。<br>① 遊食豚彩 いちにぃさん 天文館店：黑豚蕎麥沾醬涮涮鍋，11:00–21:30（LO 21:00），不定休，099-225-2123，市電「天文館通」步行約 2 分。<br>② 華蓮 鹿兒島店：黑豚せいろ蒸し，山之口町 3-12 JAフードプラザ 3–4 樓，11:30–13:30 LO／17:30–21:00 LO，約 ¥6,000–8,000（舊資料），公休日沒查到。<br>市電・市巴・觀光巴士一日券大人 ¥600。"}]},
 {d:"11/15",w:"日",t:"仙巖園芝生表演 ➔ 櫻島火山 ➔ 返回熊本",items:[
-{w:"9:00",tags:[["巴士","bus"]],h:"🚌 退房、再訪仙巖園",p:"11:00 退房，先請櫃檯寄放行李，搭巴士到仙巖園，9:45 前到。",ad:"仙巖園：鹿兒島市吉野町 9700-1",hr:"9:00 開園",fe:"可能需再買一次入園券，現場確認"},
-{w:"10:20",tags:[["表演","tour"]],h:"🦁 御殿前庭芝生：獅子舞",p:"10:20–10:40，仙巖園傳承的獅子舞，祈求驅邪消災；傳說被獅子咬頭，一年平安健康。13:20 還有一場，我們選早場。",must:1,ad:"御殿前庭芝生",hr:"10:20–10:40／13:20–13:40",no:"雨天移到竹徑亭舉行。"},
-{w:"11:00",tags:[["巴士","bus"]],h:"🍜 回市區午餐",p:"回到中央站或天文館附近吃午餐，再前往渡輪。"},
-{w:"12:30",tags:[["市電","walk"],["渡輪","ship"]],h:"⛴️ 櫻島渡輪",p:"市電到「水族館口」，步行約 7 分到乘船處，搭船約 15 分。",ad:"鹿兒島港：鹿兒島市本港新町 4-1 ➔ 櫻島港",hr:"24 小時營運，約 15 分鐘一班",fe:"大人約 ¥200–250（各來源不同）",no:"船上的烏龍麵是名物。"},
+{w:"9:00",tags:[["巴士","bus"]],h:"🚃 退房、再訪仙巖園",p:"11:00 退房，先請櫃檯寄放行李，搭 JR 到仙巌園站，步行約 3 分，9:45 前到。",ad:"仙巖園：鹿兒島市吉野町 9700-1",hr:"9:00 開園",fe:"可能需再買一次入園券，現場確認"},
+{w:"10:20",tags:[["表演","tour"]],h:"🦁 御殿前庭芝生：獅子舞",p:"10:20–10:40，仙巖園傳承的獅子舞，祈求驅邪消災；傳說被獅子咬頭，一年平安健康。13:20 還有一場，我們選早場。",must:1,ad:"御殿前庭芝生",hr:"10:20–10:40／13:20–13:40",fe:"不用另外收費，有仙巖園門票即可",no:"雨天移到竹徑亭舉行。"},
+{w:"11:00",tags:[["巴士","bus"]],h:"🍜 回市區午餐",p:"回到中央站或天文館附近吃午餐，再前往渡輪。",no:"站內可吃：遊食豚彩 いちにぃさん アミュプラザ鹿児島店，11:00–22:00（LO 21:00），你已確認 11/15 有營業。"},
+{w:"12:30",tags:[["市電","walk"],["渡輪","ship"]],h:"⛴️ 櫻島渡輪",p:"市電到「水族館口」，步行約 7 分到乘船處，搭船約 15 分。",ad:"鹿兒島港：鹿兒島市本港新町 4-1 ➔ 櫻島港",hr:"24 小時營運，約 15 分鐘一班",fe:"大人約 ¥200–250（各來源不同）",no:"船上的やぶ金烏龍麵是名物，營業時間以船上為準。"},
 {w:"13:15",tags:[["巴士","bus"],["步行","walk"]],h:"🌋 赤水展望廣場・有村熔岩展望所",p:"近看火山與熔岩原，景色壯闊。",must:1,ad:"赤水：櫻島赤水町 3629-3／有村：櫻島有村町",fe:"戶外展望，一般免費",no:"建議搭島上循環巴士，上車前先確認班次。"},
-{w:"15:00",tags:[["步行","walk"]],h:"♨️ 溶岩なぎさ公園足湯",p:"長約 100 公尺的天然溫泉足湯，邊泡邊看海灣。",ad:"櫻島橫山町 1722-3（離櫻島港步行約 10 分）",hr:"9:00 至日落",fe:"免費",no:"記得帶小毛巾。"},
-{w:"約 16:15",tags:[["渡輪","ship"],["新幹線","train"]],h:"🚅 取行李、搭新幹線回熊本",p:"渡輪回市區，取行李後搭新幹線，入住站體直通的 THE BLOSSOM。",ad:"THE BLOSSOM KUMAMOTO：熊本市西區春日 3-15-26",hr:"Check-in 15:00（最晚 24:00）",no:"新幹線班次我沒查到，建議 17:30 前上車。"}]},
+{w:"15:00",tags:[["步行","walk"]],h:"♨️ 溶岩なぎさ公園足湯",p:"長約 100 公尺的天然溫泉足湯，旁邊還有溶岩なぎさ遊歩道可以散步。",ad:"櫻島橫山町 1722-3（離櫻島港步行約 10 分）",hr:"9:00 至日落",fe:"免費",no:"記得帶小毛巾。"},
+{w:"約 16:15",tags:[["渡輪","ship"],["新幹線","train"]],h:"🚅 取行李、搭新幹線回熊本",p:"渡輪回市區，取行李後搭新幹線，入住站體直通的 THE BLOSSOM。",ad:"THE BLOSSOM KUMAMOTO：熊本市西區春日 3-15-26",hr:"Check-in 15:00（最晚 24:00）",no:"持 JR Pass 搭乘，建議 17:30 前上車。晚餐可吃 AMU Plaza 7 樓的勝烈亭（你已確認 11/15 有營業，常需排隊）。備案：天外天 熊本駅店（1 樓，11:00–22:00，不定休）。"}]},
 {d:"11/16",w:"一",t:"熊本城巡禮 & 車站自由血拼",items:[
-{w:"上午",tags:[["市電","walk"],["步行","walk"]],h:"🏯 熊本城",p:"參觀壯觀的天守閣，也能看到修復中的石垣。",must:1,ad:"熊本市中央區本丸 1-1",hr:"平時 9:00–17:00（最終入園 16:00），依季節調整",fe:"高中以上 ¥800／小中學生 ¥300（參考價）",no:"2026 年 7 月熊本地震後於 8/13 重新開放，小天守 1 樓部分區域曾限制進入，行前請查 castle.kumamoto-guide.jp。市電「熊本城・市役所前」步行約 10 分。"},
+{w:"上午",tags:[["市電","walk"],["步行","walk"]],h:"🏯 熊本城",p:"參觀壯觀的天守閣，也能看到修復中的石垣。",must:1,ad:"熊本市中央區本丸 1-1",hr:"平時 9:00–17:00（最終入園 16:00），依季節調整",fe:"高中以上 ¥800／小中學生 ¥300（參考價）",no:"大天守開放，博物館沒開（你已確認）。2026 年 7 月熊本地震後 8/13 重新開放，部分區域以現場為準。市電「熊本城・市役所前」步行約 10 分。順路可上熊本市役所 14 樓免費展望廳看城景。"},
 {w:"中午",tags:[["步行","walk"]],h:"🍡 櫻之馬場 城彩苑",p:"品嚐熊本在地美食、買伴手禮。",ad:"熊本市中央區二之丸 1-1-2",hr:"伴手禮 9:00–18:00／餐廳 11:00–18:00（最後點餐）",fe:"入場免費；熊本城博物館「わくわく座」整修中，預計 12 月才重開，11 月無法入內",no:"可搭熊本城周遊巴士「しろめぐりん」。"},
-{w:"下午",tags:[["步行","walk"]],h:"🏬 AMU Plaza 熊本",p:"與車站共構的大型購物中心，輕鬆採買伴手禮與逛街。",ad:"JR 熊本站大樓（飯店正下方）",hr:"依樓層與店家不同，出發前查官網",no:"逛完可直接回飯店放東西。"},
+{w:"下午",tags:[["步行","walk"]],h:"🏬 AMU Plaza 熊本",p:"與車站共構的大型購物中心，輕鬆採買伴手禮與逛街。",ad:"JR 熊本站大樓（飯店正下方）",hr:"依樓層與店家不同，出發前查官網",no:"逛完可直接回飯店放東西。7 樓有 LIEBE 監修的黑毛和牛漢堡排專門店「黑のハンバーグ」（套餐 ¥1,958 起，營業時間沒查到）。"},
 {w:"傍晚",tags:[["步行","walk"]],h:"☕ 愜意下午茶",p:"車站周邊悠閒小憩，享有輕鬆不趕路的自由時光。"}]},
 {d:"11/17",w:"二",t:"最後巡禮 ➔ 愉快賦歸",items:[
 {w:"早上",tags:[["步行","walk"]],h:"🍳 飯店精緻早餐",p:"進行最後整理，並買齊遺漏的伴手禮。",hr:"飯店早餐自助餐 6:30–10:30（付費方案依訂房而定）"},
@@ -233,29 +234,33 @@ const DAYS=[
 ];
 const GO=[
 ["機場 ➔ OMO5：搭機場利木津巴士到市區（「通町筋」或「桜町」一帶下車，約 40–60 分），再步行 5–10 分，下車點請用地圖確認。","OMO5 ➔ 水前寺成趣園：步行到市電「通町筋」站，搭往健軍町方向到「水前寺公園」站，再走約 3–6 分。","成趣園 ➔ 縣廳：步行約 20 分（約 1.5 公里），或查地圖搭公車。","晚上在下通・上通商店街步行即可回 OMO5。","小技巧：熊本市電一日券約 ¥500，Day 1 與 Day 5 都好用（價格以現場為準）。"],
-["OMO5 ➔ JR 熊本站：搭市電約 15–20 分到「熊本駅前」，建議 9:15 前到站。","去程：あそぼーい！1 號 熊本 9:57 ➔ 阿蘇 11:27。","阿蘇站前搭產交巴士：11:50 ➔ 草千里 12:16；回程 14:30 ➔ 阿蘇駅前 14:58（最後一班 14:55 ➔ 15:23）。","阿蘇神社：15:52 JR 阿蘇 ➔ 宮地，再步行約 15–20 分，回程班次要先查。","回程：17:20 九州橫斷特急 ➔ 熊本，再搭市電回 OMO5。"],
-["OMO5 ➔ 熊本站：市電約 15–20 分，8:00 前出門，搭約 8:50 的新幹線，約 45 分到鹿兒島中央。","索拉瑞亞西鐵就在中央站旁，先寄放行李，15:00 才能 check-in。","➔ 仙巖園：搭市區觀光巴士（City View）到「仙巌園前」，約 30 分，查好回程末班。","回市區後搭市電到「天文館通」。","小技巧：市電・市巴・City View 一日券大人 ¥600，Day 3、Day 4 都划算。"],
-["索拉瑞亞西鐵 ➔ 仙巖園：搭 City View 巴士，9:45 前到，趕 10:20 的表演。","仙巖園 ➔ 渡輪：搭巴士回市區，市電到「水族館口」，步行約 7 分到乘船處。","渡輪約 15 分，24 小時營運；赤水展望廣場距港步行約 30 分，建議搭島上循環巴士。","回程：渡輪 ➔ 市電 ➔ 鹿兒島中央站取行李 ➔ 新幹線約 45 分回熊本，THE BLOSSOM 就在站體裡。"],
+["OMO5 ➔ JR 熊本站：搭市電約 15–20 分到「熊本駅前」，建議 9:15 前到站。","去程：あそぼーい！1 號 熊本 9:57 ➔ 宮地 11:32（阿蘇 11:27）。","宮地站 ➔ 阿蘇神社：步行約 15–20 分，門前町商店街就在神社前。","回程：17:20 九州橫斷特急 ➔ 熊本，再搭市電回 OMO5。"],
+["OMO5 ➔ 熊本站：市電約 15–20 分，8:00 前出門，搭約 8:50 的新幹線，約 45 分到鹿兒島中央。","索拉瑞亞西鐵就在中央站旁，先寄放行李，15:00 才能 check-in。","➔ 仙巖園：鹿兒島中央站搭 JR 到「仙巌園站」，約 7–10 分，步行約 3 分，約每小時 2 班。備案：搭 7 號乘車處的路線巴士或 City View 到「仙巌園前」，約 25–45 分、¥220–230。","回市區後搭市電到「天文館通」。","小技巧：市電・市巴・City View 一日券大人 ¥600，Day 3、Day 4 都划算。"],
+["索拉瑞亞西鐵 ➔ 仙巖園：搭 JR 到「仙巌園站」，約 7–10 分，步行約 3 分，9:45 前到，趕 10:20 的表演。","仙巖園 ➔ 渡輪：搭巴士回市區，市電到「水族館口」，步行約 7 分到乘船處。","渡輪約 15 分，24 小時營運；赤水展望廣場距港步行約 30 分，建議搭島上循環巴士。","回程：渡輪 ➔ 市電 ➔ 鹿兒島中央站取行李 ➔ 新幹線約 45 分回熊本，THE BLOSSOM 就在站體裡。"],
 ["THE BLOSSOM ➔ 熊本城：到站前市電站搭到「熊本城・市役所前」約 14–17 分，再步行 7–10 分；或搭熊本城周遊巴士「しろめぐりん」到「桜の馬場城彩苑」。","城彩苑與熊本城之間有免費接駁車，約 15 分一班。","回程搭市電或巴士回熊本站，AMU Plaza 就在飯店下方。"],
 ["THE BLOSSOM ➔ 熊本機場：熊本站前搭機場利木津巴士，約 40–60 分。","JX847 11:55 起飛，建議搭 8:30 前後的班次，起飛前 2 小時到機場，實際班次請先查時刻表。"]
 ];
 const PB=[
 ["下雨：熊本市現代美術館距 OMO5 約 200 公尺，下通・上通有頂商店街可逛一整天。","日落提早：縣廳銀杏可改成隔天早上，或 Day 5 順路去。"],
-["火口封閉（目前狀態）：重點放在草千里與阿蘇火山博物館，神社與水基湧水通順路。","あそぼーい！當天不開或客滿：改搭普通列車，熊本 ➔ 肥後大津換車 ➔ 阿蘇，約 1.5 小時、單程 ¥1,300，先查時刻。","巴士客滿或天氣差：改去阿蘇神社與水基湧水通，搭 12:10 的 JR 阿蘇 ➔ 宮地。","整天不去阿蘇：把 Day 5 的熊本城＋城彩苑搬到今天，Day 5 改輕鬆購物。"],
+["あそぼーい！當天不開或客滿：改搭普通列車，熊本 ➔ 肥後大津換車 ➔ 宮地，約 1.5–2 小時，先查時刻。","天氣差：神社與商店街大部分是戶外，可以提早搭回程列車，回熊本逛下通・上通。","整天不去阿蘇：把 Day 5 的熊本城＋城彩苑搬到今天，Day 5 改輕鬆購物。"],
 ["下雨：11/14 表演本來就在竹徑亭，不受影響；仙巖園內有尚古集成館可躲雨。","颱風或強風表演中止：改看尚古集成館與薩摩切子工房，下午回天文館有頂商店街。","早起太累：只看 13:30 或 14:30 的薩摩雅会，新幹線改成約 10:00 出發。"],
 ["🌋 如果櫻島火山爆發或大量降灰：改走市區（10:20 獅子舞照看）","10:45 尚古集成館 ➔ 11:30 搭巴士回市區午餐","13:15 市電到「水族館口」➔ 13:30–15:30 逛水族館（9:30–18:00，最後入館 17:00，大人 ¥2,000）","15:45 選配：搭渡輪來回約 30 分，在船上看櫻島、吃烏龍麵","16:30 天文館買伴手禮 ➔ 17:00 回飯店取行李 ➔ 17:30 前搭新幹線","⚠️ 注意事項","櫻島目前警戒 Lv3，小噴火常見，景點與渡輪平常照開。","出發前一晚與當天早上，查氣象廳噴火警報與降灰預報。","在島上遇到大噴火：進建築躲避、戴口罩，聽指示回港。","新幹線預留緩衝，17:30 前上車；下載 Safety tips 防災 App。","沒趕上 10:20 場可改看 13:20 場；下雨獅子舞改在竹徑亭。"],
 ["熊本城部分區域關閉或排隊：改逛城彩苑「桜の小路」（わくわく座整修中），再去熊本市役所 14 樓免費展望廳看城景。","下雨：整天待在 AMU Plaza 逛街、下午茶。"],
 ["航班時間有變：早餐後在 AMU Plaza 補買伴手禮，行李寄放飯店或站內置物櫃。"]
 ];
 const tabs=document.getElementById('tabs'),panel=document.getElementById('panel');
+const KEY=["10:45 抵達 ➔ 熊本站換 JR Pass 並劃位 ➔ 水前寺・縣廳 ➔ 晚上下通","9:57 あそぼーい！➔ 宮地 11:32；17:20 特急回熊本","約 8:50 新幹線 ➔ 11:30 和蔵 ➔ 13:30 薩摩雅会","10:20 獅子舞 ➔ 12:30 渡輪上櫻島 ➔ 17:30 前新幹線回熊本","熊本城（大天守開、博物館沒開）＋ 城彩苑 ＋ AMU Plaza","9:00 前出發 ➔ 熊本機場 ➔ JX847 11:55"];
+const mapU=a=>'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(a.replace(/（[^）]*）/g,'').replace('：',' '));
 function show(n){
  [...tabs.children].forEach((b,i)=>b.setAttribute('aria-selected',i===n));
  const D=DAYS[n];
- panel.innerHTML=`<div class="dayhead"><h3>DAY ${n+1}・${D.d}（${D.w}）</h3><p>${D.t}</p></div><div class="card box go"><b>🚇 大眾運輸路線</b><ul>${GO[n].map(x=>`<li>${x}</li>`).join('')}</ul></div><ol class="tl">`+
- D.items.map((x,i)=>`<li class="${x.must?'must':''}" style="--i:${i}"><div class="card"><span class="time">${x.w}</span>${x.tags.map(t=>`<span class="tag t-${t[1]}">${t[0]}</span>`).join('')}${x.must?'<span class="must-b">★ 必去</span>':''}${x.warn?'<span class="tag t-warn">⚠️ 目前封閉</span>':''}<h4>${x.h}</h4><p>${x.p}</p>${(x.ad||x.hr||x.fe||x.no)?`<div class="inf">${x.ad?`<div>📍 ${x.ad}</div>`:''}${x.hr?`<div>🕒 ${x.hr}</div>`:''}${x.fe?`<div>🎫 ${x.fe}</div>`:''}${x.no?`<div class="${x.warn?'wn':'no'}">${x.no}</div>`:''}</div>`:''}</div></li>`).join('')+`</ol><div class="card box pb"><b>🅱️ Plan B 備案</b><ul>${PB[n].map(x=>/^(🌋|⚠️)/.test(x)?`<li style="list-style:none;margin-left:-18px;margin-top:8px"><b>${x}</b></li>`:`<li>${x}</li>`).join('')}</ul></div>`;
+ panel.innerHTML=`<div class="dayhead"><h3>DAY ${n+1}・${D.d}（${D.w}）</h3><p>${D.t}</p></div><div class="key">⭐ ${KEY[n]}</div><div class="ctl"><button id="oa">展開全部</button><button id="ca">收合全部</button></div><details class="card box go"><summary><b>🚇 大眾運輸路線</b></summary><ul>${GO[n].map(x=>`<li>${x}</li>`).join('')}</ul></details><ol class="tl">`+
+ D.items.map((x,i)=>`<li class="${x.must?'must':''}" style="--i:${i}"><details class="card it"><summary><span class="time">${x.w}</span>${x.tags.map(t=>`<span class="tag t-${t[1]}">${t[0]}</span>`).join('')}${x.must?'<span class="must-b">★ 必去</span>':''}${x.warn?'<span class="tag t-warn">⚠️ 目前封閉</span>':''}<h4>${x.h}</h4></summary><div class="more"><p>${x.p}</p>${(x.ad||x.hr||x.fe||x.no)?`<div class="inf">${x.ad?`<div>📍 ${x.ad}${x.ad.includes('➔')?'':` <a class="mp" href="${mapU(x.ad)}" target="_blank" rel="noopener">開地圖</a>`}</div>`:''}${x.hr?`<div>🕒 ${x.hr}</div>`:''}${x.fe?`<div>🎫 ${x.fe}</div>`:''}${x.no?`<div class="${x.warn?'wn':'no'}">${x.no}</div>`:''}</div>`:''}</div></details></li>`).join('')+`</ol><details class="card box pb"><summary><b>🅱️ Plan B 備案</b></summary><ul>${PB[n].map(x=>/^(🌋|⚠️)/.test(x)?`<li style="list-style:none;margin-left:-18px;margin-top:8px"><b>${x}</b></li>`:`<li>${x}</li>`).join('')}</ul></details>`;
+ document.getElementById('oa').onclick=()=>panel.querySelectorAll('details.it').forEach(d=>d.open=true);
+ document.getElementById('ca').onclick=()=>panel.querySelectorAll('details.it').forEach(d=>d.open=false);
 }
 DAYS.forEach((D,i)=>{const b=document.createElement('button');b.role='tab';b.innerHTML=`Day ${i+1}<small>${D.d}（${D.w}）</small>`;b.onclick=()=>show(i);tabs.appendChild(b)});
-show(0);
+(function(){const d=Math.floor((new Date()-new Date("2026-11-12T00:00:00"))/864e5);show(d>=0&&d<6?d:0)})();
 /* countdown */
 (function(){
  const s=new Date('2026-11-12T00:00:00+08:00'),e=new Date('2026-11-18T00:00:00+08:00'),n=new Date();
@@ -267,7 +272,7 @@ show(0);
 /* storage helpers */
 const st={get(k){try{return JSON.parse(localStorage.getItem(k))}catch(e){return null}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
 document.querySelectorAll('[data-k]').forEach(i=>{const v=st.get('kt-'+i.dataset.k);if(v)i.value=v;i.oninput=()=>st.set('kt-'+i.dataset.k,i.value)});
-const TODO=['護照（效期 6 個月以上）','Visit Japan Web 入境登錄','機票與訂房憑證存手機','日幣現金與信用卡','eSIM／上網方案','評估 JR 九州鐵路周遊券','行動電源與轉接頭','保暖外套（阿蘇早晚較涼）','下載 Safety tips 防災 App、開緊急速報','櫻島當天早上查噴火警報與降灰預報'];
+const TODO=['護照（效期 6 個月以上）','Visit Japan Web 入境登錄','機票與訂房憑證存手機','日幣現金與信用卡','eSIM／上網方案','評估 JR 九州鐵路周遊券','行動電源與轉接頭','保暖外套（阿蘇早晚較涼）','下載 Safety tips 防災 App、開緊急速報','櫻島當天早上查噴火警報與降灰預報','11/12 到熊本站用 JR Pass 劃位：あそぼーい！、17:20 特急、兩趟新幹線','查新幹線與 JR 仙巌園站的班次','11/14 晚餐訂位（いちにぃさん／華蓮）','熊本機場巴士班次與票價','出發前看熊本城官網的開放區域'];
 const saved=st.get('kt-todo')||[];
 const ul=document.getElementById('todoList'),bar=document.getElementById('bar');
 function upd(){const c=ul.querySelectorAll('input:checked').length;bar.style.width=(c/TODO.length*100)+'%';st.set('kt-todo',[...ul.querySelectorAll('input')].map((x,i)=>x.checked?i:-1).filter(i=>i>=0))}
